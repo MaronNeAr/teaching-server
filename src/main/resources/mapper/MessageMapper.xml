@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.yin.dao.bbs.MessageMapper">
+    <select id="selectAllByCid" resultType="com.example.yin.domain.bbs.Message">
+        select * from bbs_message where cid = #{cid}
+    </select>
+    <insert id="addMessage">
+        insert into bbs_message values (#{mid}, #{content}, #{date}, #{cid}, #{uid})
+    </insert>
+</mapper>
